@@ -7,6 +7,11 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+
+//template_7qenwxc
+//service_0b0yu6s
+//tOi39YG4z8mHjvId8
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -33,16 +38,16 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        "service_0b0yu6s",
+        "template_7qenwxc",
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Andrei Piskun",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "antiwebdev@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        "tOi39YG4z8mHjvId8"
       )
       .then(
         () => {
@@ -70,7 +75,7 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='flex-[1] md:flex-[1.5] bg-black-100 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -125,7 +130,7 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className='xl:flex-1 xl:w-auto md:h-[550px] h-[350px]'
       >
         <EarthCanvas />
       </motion.div>
